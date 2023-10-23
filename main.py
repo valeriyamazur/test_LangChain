@@ -41,7 +41,7 @@ class KnowledgeBase():
         embeddings = OpenAIEmbeddings()
         docsearch = Chroma.from_documents(docs, embeddings)
         self.chain = RetrievalQAWithSourcesChain.from_chain_type(
-            ChatOpenAI(openai_api_key="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"),
+            ChatOpenAI(openai_api_key=""),
             chain_type='map_reduce',
             retriever=docsearch.as_retriever())
 
